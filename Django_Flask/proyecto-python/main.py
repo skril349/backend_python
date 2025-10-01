@@ -8,6 +8,8 @@ Proyecto python mysql:
 
 """
 
+from usuarios import acciones
+
 print("""
 
 Acciones disponibles:
@@ -15,11 +17,13 @@ Acciones disponibles:
       - Registro
 """)
 
+hazEl = acciones.Acciones()
+
 accion = input("Que quieres hacer?")
 
 if accion == "Registro":
-    print("Vamos a registrarnos en el sistema ...")
+    hazEl.registro()
 
-if accion == "Login":
-    print("Vale! Identificate en el sistema ...")
-
+elif accion == "Login":
+    hazEl.login()
+    
