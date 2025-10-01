@@ -18,7 +18,8 @@ Acciones disponibles:
 accion = input("Que quieres hacer?")
 
 if accion == "Registro":
-    print("Vamos a registrarnos")
+    print("Vamos a registrarnos en el sistema ...")
 
 if accion == "Login":
-    print("vamos a logearnos")
+    print("Vale! Identificate en el sistema ...")
+
