@@ -34,7 +34,9 @@ class Acciones:
         Acciones disponibles:
               - Crear nota (crear)
               - Mostrar notas (mostrar)
+              - Mostrar nota (mostrar nota)
               - Borrar notas (borrar)
+              - Editar nota (editar)
               - Salir (salir)
         """)
 
@@ -46,17 +48,27 @@ class Acciones:
             pass
         elif accion == "mostrar":
             print("Ok, vamos a mostrar tus notas")
+            action.mostrarNotas(usuario)
             self.proximasAcciones(usuario)
-
-            #mostrar = notas.MostrarNotas(usuario)
-            #mostrar.mostrar()
+            pass
+        elif accion == "mostrar nota":
+            print("Ok, vamos a mostrar una nota en concreto")
+            titulo = input("Introduce el titulo de la nota a buscar: ")
+            action.mostrarNota(usuario,titulo)
+            self.proximasAcciones(usuario)
             pass
         elif accion == "borrar":
             print("Ok, vamos a borrar tus notas")
+            titulo = input("Introduce el titulo de la nota a borrar: ")
+            action.borrarNota(usuario,titulo)
             self.proximasAcciones(usuario)
+            pass
 
-            #borrar = notas.BorrarNotas(usuario)
-            #borrar.borrar()
+        elif accion == "editar":
+            print ("Ok, vamos a editar una nota")
+            titulo = input("Introduce el titulo de la nota a editar: ")
+            action.editarNota(usuario,titulo)
+            self.proximasAcciones(usuario)
             pass
         elif accion == "salir":
             print(f"Ok {usuario[1]}, hasta pronto!") 
