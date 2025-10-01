@@ -39,11 +39,10 @@ class Acciones:
         """)
 
         accion = input( "Que quieres hacer?")
+        action = notas.Acciones()
         if accion == "crear":
-            crear = notas.Acciones()
-            crear.crearNota(usuario)
+            action.crearNota(usuario)
             self.proximasAcciones(usuario)
-            #crear.crear()
             pass
         elif accion == "mostrar":
             print("Ok, vamos a mostrar tus notas")
