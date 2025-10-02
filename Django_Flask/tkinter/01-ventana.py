@@ -19,7 +19,27 @@ class Programa:
         else:
             self.root.resizable(0,0)
         self.root.config(bg=self.bg_color)
+        
+
+    def addTexto(self):
+        texto = Label(self.root, text="Hola soy un texto")
+        texto.config(
+            fg="white",
+            bg="green",
+            font=("Arial", 20)
+        )
+        texto.pack()
+    
+    def mostrar(self):
         self.root.mainloop()
 
+# Instanciemos y cargamosmos el programa
 programa = Programa()
 programa.cargar()
+programa.addTexto()
+programa.addTexto()
+programa.addTexto()
+programa.addTexto()
+programa.addTexto()
+programa.addTexto()
+programa.mostrar()
