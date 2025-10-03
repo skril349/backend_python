@@ -30,14 +30,14 @@ marco2.config(
 marco2.pack(side=RIGHT, anchor=SE)
 # Label 1
 
-texto1 = Label(ventana, text="Hola soy un texto verde")
+texto1 = Label(marco_padre, text="Hola soy un texto verde")
 texto1.config(
     fg="black",
     background="green",
     font=("Arial", 20),
     cursor="spider"
 )
-texto1.pack(side=TOP, expand=YES, fill=X)
+texto1.pack(side=TOP)
 
 
 ventana.mainloop()
