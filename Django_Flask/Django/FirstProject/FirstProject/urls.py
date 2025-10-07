@@ -18,6 +18,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+# Importar apps con mis mivstas
+from miapp import views
+
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("hola-mundo/",views.hola_mundo, name="hola_mundo" ),
+    path("",views.index, name="index" ),
+    path("pagina-principal/",views.pagina, name="pagina" ),
 ]
