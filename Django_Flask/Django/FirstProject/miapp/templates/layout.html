@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}{% endblock %}</title>
+    </head>
+    <body>
+        <h1>Sitio web con Django - TV</h1>
+        <hr/>
+        <ul>
+            <li><a href="/">Index</a></li>
+            <li><a href="/hola-mundo/">Hola mundo</a></li>
+            <li><a href="/pagina-principal/">Pagina principal</a></li>  
+            <li><a href="/contacto/">Contacto</a></li>
+        </ul>
+        <hr/>
+
+        <div id="content">
+            {% block contenido %}
+                <!-- Aquí va mi contenido dinámico -->
+            {% endblock %}
+        </div>
+        <footer>Master en python &copy; Toni </footer>
+    </body>
+</html>
