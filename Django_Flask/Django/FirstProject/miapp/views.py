@@ -7,6 +7,19 @@ from django.shortcuts import render, HttpResponse
 
 #MVT = Modelo vista template -> Acciones (metodos)
 
+layout = """
+
+<h1>Sitio web con Django - TV</h1>
+
+<hr/>
+<ul>
+    <li><a href="/">Index</a></li>
+    <li><a href="/hola-mundo/">Hola mundo</a></li>
+    <li><a href="/pagina-principal/">Pagina principal</a></li>  
+</ul>
+<hr/>
+"""
+
 def index(request):
     html = """<h1>Index - TV </h1>
         <p>Años hasta 2050:</p>
@@ -18,11 +31,11 @@ def index(request):
         html += "<li>" + str(year) + "</li>"
         year += 1
     html += "</ul>"
-    
-    return HttpResponse(html)
+
+    return HttpResponse(layout + html)
 
 def hola_mundo(request):
-    return HttpResponse("<h1>Hola mundo con Django - TV </h1>")
+    return HttpResponse(layout + "<h1>Hola mundo con Django - TV </h1>")
 
 def pagina(request):
-    return HttpResponse("<h1>Mi primera pagina - TV </h1>")
+    return HttpResponse(layout + "<h1>Mi primera pagina - TV </h1>")
