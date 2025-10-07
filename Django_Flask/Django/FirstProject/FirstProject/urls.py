@@ -26,4 +26,5 @@ urlpatterns = [
     path("hola-mundo/",views.hola_mundo, name="hola_mundo" ),
     path("",views.index, name="index" ),
     path("pagina-principal/",views.pagina, name="pagina" ),
+    path("contacto/<str:nombre>/",views.contacto, name="contacto" ),
 ]

@@ -16,6 +16,7 @@ layout = """
     <li><a href="/">Index</a></li>
     <li><a href="/hola-mundo/">Hola mundo</a></li>
     <li><a href="/pagina-principal/">Pagina principal</a></li>  
+    <li><a href="/contacto/">Contacto</a></li>
 </ul>
 <hr/>
 """
@@ -39,3 +40,6 @@ def hola_mundo(request):
 
 def pagina(request):
     return HttpResponse(layout + "<h1>Mi primera pagina - TV </h1>")
+
+def contacto(request,nombre="toni"):
+    return HttpResponse(layout + f"<h1>Contacto - TV </h1><p>Nombre: {nombre}</p>")
