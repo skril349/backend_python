@@ -8,7 +8,18 @@ from django.shortcuts import render, HttpResponse
 #MVT = Modelo vista template -> Acciones (metodos)
 
 def index(request):
-    return HttpResponse("<h1>Index - TV </h1>")
+    html = """<h1>Index - TV </h1>
+        <p>Años hasta 2050:</p>
+        <ul>
+    
+    """
+    year = 2025
+    while year <=2050:
+        html += "<li>" + str(year) + "</li>"
+        year += 1
+    html += "</ul>"
+    
+    return HttpResponse(html)
 
 def hola_mundo(request):
     return HttpResponse("<h1>Hola mundo con Django - TV </h1>")
