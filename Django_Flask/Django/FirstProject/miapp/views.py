@@ -41,5 +41,5 @@ def hola_mundo(request):
 def pagina(request):
     return HttpResponse(layout + "<h1>Mi primera pagina - TV </h1>")
 
-def contacto(request,nombre="toni"):
-    return HttpResponse(layout + f"<h1>Contacto - TV </h1><p>Nombre: {nombre}</p>")
+def contacto(request,nombre="", apellidos=""):
+    return HttpResponse(layout + f"<h1>Contacto - TV </h1><p>Nombre: {nombre}</p><p>Apellidos: {apellidos}</p>")
