@@ -33,16 +33,16 @@ def index(request):
         year += 1
     html += "</ul>"
 
-    return HttpResponse(layout + html)
+    return render(request, "index.html", {"html": html})
 
 def hola_mundo(request):
-    return HttpResponse(layout + "<h1>Hola mundo con Django - TV </h1>")
+    return render(request, "holaMundo.html")
 
 def pagina(request,redirigir=0):
     if redirigir == 1:
         return redirect("/contacto/Toni/Alvarez")
     
-    return HttpResponse(layout + "<h1>Mi primera pagina - TV </h1>")
+    return render(request, "pagina.html")
 
 def contacto(request,nombre="", apellidos=""):
     return HttpResponse(layout + f"<h1>Contacto - TV </h1><p>Nombre: {nombre}</p><p>Apellidos: {apellidos}</p>")
