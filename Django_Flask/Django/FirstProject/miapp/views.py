@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, redirect
 
 
 # Create your views here.
@@ -38,7 +38,10 @@ def index(request):
 def hola_mundo(request):
     return HttpResponse(layout + "<h1>Hola mundo con Django - TV </h1>")
 
-def pagina(request):
+def pagina(request,redirigir=0):
+    if redirigir == 1:
+        return redirect("/contacto/Toni/Alvarez")
+    
     return HttpResponse(layout + "<h1>Mi primera pagina - TV </h1>")
 
 def contacto(request,nombre="", apellidos=""):
